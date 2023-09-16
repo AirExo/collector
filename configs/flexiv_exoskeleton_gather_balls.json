@@ -1,0 +1,52 @@
+{
+    "name": "Collector",
+    "mode": "exoskeleton",
+    "encoder_left": {
+        "ids": [1, 2, 3, 4, 5, 6, 7, 8],
+        "port": "/dev/ttyUSB0",
+        "baudrate": 115200,
+        "logger_name": "AngleEncoder-left",
+        "shm_name": "encoder_left",
+        "streaming_freq": 30
+    }, 
+    "encoder_right": {
+        "ids": [1, 2, 3, 4, 5, 6, 7, 8],
+        "port": "/dev/ttyUSB2",
+        "baudrate": 115200,
+        "logger_name": "AngleEncoder-right",
+        "shm_name": "encoder_right",
+        "streaming_freq": 30
+    }, 
+    "data_path": "/home/ubuntu/data",
+    "shm_data": {
+        "encoder_left": {
+            "shape": [8],
+            "type": "float"
+        },
+        "encoder_right": {
+            "shape": [8],
+            "type": "float"
+        },
+        "image": {
+            "shape": [720, 1280, 3],
+            "type": "uint8"
+        },
+        "depth": {
+            "shape": [720, 1280],
+            "type": "float"
+        }
+    },
+    "cameras": [
+        {
+            "name": "realsense",
+            "serial": "104122061602",
+            "frame_rate": 30,
+            "resolution": [1280, 720],
+            "align": 1,
+            "logger_name": "RealSense Camera",
+            "shm_name_rgb": "image",
+            "shm_name_depth": "depth",
+            "streaming_freq": 30
+        }
+    ]
+}

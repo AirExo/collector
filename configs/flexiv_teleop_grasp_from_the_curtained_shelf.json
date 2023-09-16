@@ -1,0 +1,71 @@
+{
+    "name": "Collector",
+    "mode": "teleop",
+    "config": {
+        "left": "exoskeleton/configs/flexiv_left_grasp_from_the_curtained_shelf.json",
+        "right": "exoskeleton/configs/flexiv_right_grasp_from_the_curtained_shelf.json"
+    },
+    "data_path": "/home/ubuntu/data",
+    "shm_data": {
+        "robot_left": {
+            "shape": [39],
+            "type": "float"
+        },
+        "gripper_left": {
+            "shape": [7],
+            "type": "int"
+        },
+        "robot_right": {
+            "shape": [39],
+            "type": "float"
+        },
+        "encoder_left": {
+            "shape": [8],
+            "type": "float"
+        },
+        "encoder_right": {
+            "shape": [8],
+            "type": "float"
+        },
+        "image": {
+            "shape": [720, 1280, 3],
+            "type": "uint8"
+        },
+        "depth": {
+            "shape": [720, 1280],
+            "type": "float"
+        },        
+        "image_up": {
+            "shape": [720, 1280, 3],
+            "type": "uint8"
+        },
+        "depth_up": {
+            "shape": [720, 1280],
+            "type": "float"
+        }
+    },
+    "cameras": [
+        {
+            "name": "realsense",
+            "serial": "104122060811",
+            "frame_rate": 30,
+            "resolution": [1280, 720],
+            "align": 1,
+            "logger_name": "RealSense Camera",
+            "shm_name_rgb": "image",
+            "shm_name_depth": "depth",
+            "streaming_freq": 30
+        },
+        {
+            "name": "realsense",
+            "serial": "104122061018",
+            "frame_rate": 30,
+            "resolution": [1280, 720],
+            "align": 1,
+            "logger_name": "RealSense Camera",
+            "shm_name_rgb": "image_up",
+            "shm_name_depth": "depth_up",
+            "streaming_freq": 30
+        }
+    ]
+}
