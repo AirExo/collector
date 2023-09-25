@@ -1,7 +1,7 @@
 source /home/ubuntu/anaconda3/etc/profile.d/conda.sh
 conda activate py38
 export DISPLAY=:1
-cd /home/ubuntu/hongjie/DARM/
+cd /home/ubuntu/hongjie/collector/
 cfg=$1
 tid=$2
 sid=$3
