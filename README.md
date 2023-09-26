@@ -54,7 +54,7 @@ Then, use the following command for data collection.
 python main.py --type teleop --task [Task Name]
 ```
 
-Here, for `[Task Name]` we support 2 tasks in our paper, *i.e.*, `gather_balls` and `grasp_from_the_curtained_shelf`. Before teleoperation, you will be asked to provide task ID, scene ID and user ID (operator ID) respectively. The collected data will be stored under `[Data Path]/task[Task ID]/scene[Scene ID]/` according to the configuration settings, with the format of:
+Here, for `[Task Name]` we support 2 tasks in our paper: `gather_balls` and `grasp_from_the_curtained_shelf`. Before teleoperation, you will be asked to provide task ID, scene ID and user ID (operator ID) respectively. The collected data will be stored under `[Data Path]/task[Task ID]/scene[Scene ID]/` according to the configuration settings, with the format of:
 
 ```text
 meta.json
@@ -76,7 +76,7 @@ Then, use the following command for data collection.
 python main.py --type exoskeleton --task [Task Name]
 ```
 
-Here, for `[Task Name]` we support 2 tasks in our paper, *i.e.*, `gather_balls` and `grasp_from_the_curtained_shelf`. Before teleoperation, you will be asked to provide task ID, scene ID and user ID (operator ID) respectively. The collected data will be stored under `[Data Path]/task[Task ID]_itw/scene[Scene ID]/` according to the configuration settings, with the same format as the teleoperated demonstrations.
+Here, for `[Task Name]` we support 2 tasks in our paper: `gather_balls` and `grasp_from_the_curtained_shelf`. Before teleoperation, you will be asked to provide task ID, scene ID and user ID (operator ID) respectively. The collected data will be stored under `[Data Path]/task[Task ID]_itw/scene[Scene ID]/` according to the configuration settings, with the same format as the teleoperated demonstrations.
 
 ## Citation
 
