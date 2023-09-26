@@ -1,6 +1,6 @@
 # AirExo
 
-This repository contains code for teleoperating Flexiv robotic arms using ***AirExo***, as well as code for demonstrations data collection, including teleoperated demonstration data and in-the-wild demonstration data.
+This repository contains code for teleoperating Flexiv robotic arms using ***AirExo***, as well as code for demonstration data collection, including teleoperated demonstration data and in-the-wild demonstration data.
 
 ## Requirements
 

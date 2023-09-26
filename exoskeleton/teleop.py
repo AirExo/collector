@@ -40,7 +40,6 @@ class SingleArmTeleOperator(object):
         self.num_ids = len(self.ids)
         self.robot = get_robot(**self.cfgs.robot)
         self.robot.streaming()
-        self.prev_enc6 = 0
     
     def mapping(self, enc, x, num):
         scaling = self.cfgs.mapping[enc].scaling
