@@ -1,7 +1,7 @@
-source /home/ubuntu/anaconda3/etc/profile.d/conda.sh
-conda activate py38
+source [CONDA ACTIVATE SCRIPT]
+conda activate [CONDA ENV]
 export DISPLAY=:1
-cd /home/ubuntu/hongjie/collector/
+cd [PATH TO THE COLLECTOR]
 cfg=$1
 tid=$2
 sid=$3

@@ -8,9 +8,7 @@ import numpy as np
 from pynput import keyboard
 from easydict import EasyDict as edict
 from easyrobot.camera.api import get_rgbd_camera
-from easyrobot.utils.logger import ColoredLogger
 from easyrobot.utils.shm import SharedMemoryManager
-from PIL import Image
 
 
 def to_type(s):
@@ -141,7 +139,7 @@ if __name__ == '__main__':
     with open(args.cfg, 'r') as f:
         cfgs = edict(json.load(f))
     if cfgs.mode == 'exoskeleton':
-        subpath = os.path.join('task_itw{}'.format(args.task), 'scene{}'.format(args.scene))
+        subpath = os.path.join('task{}_itw'.format(args.task), 'scene{}'.format(args.scene))
     else:
         subpath = os.path.join('task{}'.format(args.task), 'scene{}'.format(args.scene))
     collector = Collector(cfgs, subpath, user = args.user)

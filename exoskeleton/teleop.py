@@ -204,7 +204,7 @@ class DualArmTeleOperator(object):
 
 
 if __name__ == '__main__':
-    op = SingleArmTeleOperator('configs/flexiv_left.json')
+    op = SingleArmTeleOperator('configs/flexiv_left_gather_balls.json')
     op.calibration()
     op.start()
     time.sleep(10)

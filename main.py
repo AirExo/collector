@@ -7,6 +7,7 @@ from easydict import EasyDict as edict
 from easyrobot.encoder.angle import AngleEncoder
 from exoskeleton.teleop import DualArmTeleOperator
 
+
 if __name__ == '__main__':
     os.system("kill -9 `ps -ef | grep collector | grep -v grep | awk '{print $2}'`")
     os.system('rm -f /dev/shm/*')
@@ -14,22 +15,22 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        '--cfg', '-c', 
-        default = 'grasp_from_the_curtained_shelf', 
-        help = 'category of the task', 
+        '--task', '-t', 
+        default = 'gather_balls', 
+        help = 'task name', 
         type = str,
-        choices = ['gather_balls','grasp_from_the_curtained_shelf']
+        choices = ['gather_balls', 'grasp_from_the_curtained_shelf']
     )
     parser.add_argument(
         '--type',
         default = 'teleop', 
-        help = 'category of the configuration file', 
+        help = 'type of demonstration collection', 
         type = str,
-        choices = ['teleop','exoskeleton']
+        choices = ['teleop', 'exoskeleton']
     )
     args = parser.parse_args()
 
-    run_path = 'configs/flexiv_'+str(args.type)+'_'+str(args.cfg)+'.json'
+    run_path = 'configs/flexiv_' + str(args.type) + '_' + str(args.task) + '.json'
 
     if not os.path.exists(run_path):
         raise AttributeError('Please provide the configuration file {}.'.format(run_path))
@@ -42,9 +43,8 @@ if __name__ == '__main__':
     
     if cfgs.mode == 'teleop':
         op = DualArmTeleOperator(cfgs.config.left, cfgs.config.right)
-        if args.cfg == 'grasp_from_the_curtained_shelf' or args.cfg == 'gather_balls':
-            op.initialization()
-            time.sleep(2)
+        op.initialization()
+        time.sleep(2)
         op.calibration()
 
         has_start = False
@@ -130,4 +130,4 @@ if __name__ == '__main__':
         listener.stop()
         
     else:
-        raise AttributeError('Invalid mode.')
+        raise AttributeError('Invalid type.')

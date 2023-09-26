@@ -6,15 +6,17 @@ from exoskeleton.teleop import DualArmTeleOperator
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
-    '--config', '-c', 
-    default = 'grasp_from_the_curtained_shelf', 
-    help = 'category of the task', 
+    '--task', '-t', 
+    default = 'gather_balls', 
+    help = 'task name', 
     type = str,
     choices = ['gather_balls', 'grasp_from_the_curtained_shelf']
 )
 args = parser.parse_args()
 
-op = DualArmTeleOperator('exoskeleton/configs/flexiv_left_'+str(args.config)+'.json', 'exoskeleton/configs/flexiv_right_'+str(args.config)+'.json')
+op = DualArmTeleOperator(
+    'exoskeleton/configs/flexiv_left_' + str(args.task) + '.json', 'exoskeleton/configs/flexiv_right_' + str(args.task) + '.json'
+)
 
 logger = logging.getLogger("TeleOP-left")
 logger.setLevel(logging.INFO)
