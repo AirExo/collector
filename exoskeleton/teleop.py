@@ -50,7 +50,6 @@ class SingleArmTeleOperator(object):
         erad = self.cfgs.mapping[enc].encoder_rad
         rmin = self.cfgs.mapping[enc].robot_min
         rmax = self.cfgs.mapping[enc].robot_max
-        special = self.cfgs.mapping[enc].special
         if erad:
             x = rad_2_deg(x)
         x = deg_clip_in_range(x, emin, emax, edir)
@@ -62,20 +61,6 @@ class SingleArmTeleOperator(object):
         rzc = self.cfgs.mapping[enc].robot_zero_centered
         fixed = self.cfgs.mapping[enc].fixed
         x = deg_clip_in_range(mr + deg_distance(me, x, edir) * rdir, rmin, rmax, rdir)
-        if special:
-            if self.prev_enc6 == rmin and rdir == 1:
-                if x == rmin or x <= rmax:
-                    x = rmin
-            elif self.prev_enc6 == rmax and rdir == 1:
-                if x >= rmin or x == rmax:
-                    x = rmax
-            elif self.prev_enc6 == rmin and rdir == -1:
-                if x >= rmax or x == rmin:
-                    x = rmin
-            elif self.prev_enc6 == rmax and rdir == -1:
-                if x == rmax or x <= rmin:
-                    x = rmax
-            self.prev_enc6 = x
         if fixed:
             x = self.cfgs.mapping[enc].fixed_value
         if rzc:
