@@ -1,6 +1,6 @@
 # AirExo
 
-[[Paper]](https://arxiv.org/pdf/2309.14975.pdf) [[Project Page]](https://airexo.github.io/)
+[[Paper]](https://arxiv.org/pdf/2309.14975.pdf) [[Project Page]](https://airexo.github.io/) [[Sample Demonstration Data]](https://drive.google.com/drive/folders/1f_bmrFPep90aUSBj28TdXRiNvHo7PpxR?usp=drive_link)
 
 This repository contains code for teleoperating Flexiv robotic arms using ***AirExo***, as well as code for demonstration data collection, including teleoperated demonstration data and in-the-wild demonstration data.
 
