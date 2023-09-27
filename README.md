@@ -1,6 +1,6 @@
 # AirExo
 
-[[Paper]]() [[Project Page]](https://airexo.github.io/)
+[[Paper]](https://arxiv.org/pdf/2309.14975.pdf) [[Project Page]](https://airexo.github.io/)
 
 This repository contains code for teleoperating Flexiv robotic arms using ***AirExo***, as well as code for demonstration data collection, including teleoperated demonstration data and in-the-wild demonstration data.
 
@@ -85,5 +85,11 @@ Here, for `[Task Name]` we support 2 tasks in our paper: `gather_balls` and `gra
 If you find ***AirExo*** useful in your research, please consider citing the following paper:
 
 ```bibtex
-
+@article{
+    fang2023low,
+    title = {Low-Cost Exoskeletons for Learning Whole-Arm Manipulation in the Wild},
+    author = {Fang, Hongjie and Fang, Hao-Shu and Wang, Yiming and Ren, Jieji and Chen, Jingjing and Zhang, Ruo and Wang, Weiming and Lu, Cewu},
+    journal = {arXiv preprint arXiv:2309.14975},
+    year = {2023}
+}
 ```
