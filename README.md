@@ -1,12 +1,12 @@
 # AirExo
 
-[[Paper]](https://arxiv.org/pdf/2309.14975.pdf) [[Project Page]](https://airexo.github.io/) [[Sample Demonstration Data]](https://drive.google.com/drive/folders/1f_bmrFPep90aUSBj28TdXRiNvHo7PpxR?usp=drive_link)
+[[Paper]](https://arxiv.org/pdf/2309.14975.pdf) [[Project Page]](https://airexo.github.io/) [[Sample Demonstration Data]](https://drive.google.com/drive/folders/1f_bmrFPep90aUSBj28TdXRiNvHo7PpxR?usp=drive_link) [[ACT with in-the-Wild Learning]](https://github.com/AirExo/act-in-the-wild)
 
 This repository contains code for teleoperating Flexiv robotic arms using ***AirExo***, as well as code for demonstration data collection, including teleoperated demonstration data and in-the-wild demonstration data.
 
 ## Requirements
 
-**Hardware**. ***AirExo***, Intel RealSense D415/D435 camera(s), and two Flexiv Rizon robotic arms. For other types of the robots, you can slightly modify the code to adapt them.
+**Hardware**. ***AirExo***, Intel RealSense D415/D435 camera(s), and two Flexiv Rizon robotic arms. For other types of robots, you can slightly modify the code to adapt them.
 
 **Python Dependencies**.
 
