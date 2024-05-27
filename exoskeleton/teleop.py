@@ -4,7 +4,7 @@ import json
 import logging
 import threading
 from easydict import EasyDict as edict
-from easyrobot.utils.degree import *
+from easyrobot.utils.transforms.degree import *
 from easyrobot.utils.logger import ColoredLogger
 from easyrobot.encoder.angle import AngleEncoder
 from exoskeleton.robot.api import get_robot

@@ -8,7 +8,7 @@ import numpy as np
 from pynput import keyboard
 from easydict import EasyDict as edict
 from easyrobot.camera.api import get_rgbd_camera
-from easyrobot.utils.shm import SharedMemoryManager
+from easyrobot.utils.shared_memory import SharedMemoryManager
 
 
 def to_type(s):
